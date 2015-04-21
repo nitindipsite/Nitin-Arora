@@ -1,0 +1,30 @@
+       Fork
+-	Fork
+-	In the command problem, “git clone https://github.com/nitindipsite/paleo-recipes”
+To keep in sync with upstream branch
+-	Go the cloned directory paleo-recipes and type “git remote –v”
+-	Type “git remote add upstream https://github.com/blainsmith/paleo-recipes.git”
+-	Now again type “git remote –v” and you should also see the upstream repo as upstream and your forked as origin
+
+origin  		https://github.com/nitindipsite/paleo-recipes.git (fetch)
+origin  		https://github.com/nitindipsite/paleo-recipes.git (push)
+upstream        	https://github.com/blainsmith/paleo-recipes.git (fetch)
+upstream        	https://github.com/blainsmith/paleo-recipes.git (push)
+
+    Use this link to learn more: https://help.github.com/articles/syncing-a-fork/
+
+        To Checkin
+         Add a file: git add Controller\HomeController.cs
+        Commit new files: git commit –m “some useful check in message”
+        Commit changes: git commit –a 
+        Check in:  git push –u origin master
+
+        On Another merge syncing the changes you just merged
+        One way is to stash the changes on this branch and pull the changes from the remote
+        Check status showing modified changes: git status
+        Stash the changes: git stash
+         You can run ‘git status’ again to see your local changes are stashed away, also run ‘git stash list’
+        Now pull the changes from remote: git pull (this fetches and merges)
+        Now apply your local changes: git stash apply
+        If you run git status now, you may see some complain about ‘both modified’ so open the file and merge the changes and do ‘git add HomeController.cs’
+        Finally push these changes to the remote
