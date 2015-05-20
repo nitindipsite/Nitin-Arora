@@ -1,4 +1,13 @@
-       Fork
+To view what’s changed
+	git status or git status –s
+     To undo a modified file
+                git checkout HEAD <<filename>> 
+     To undelete a file, if deletion has been committed.
+               Git rev-list –n 1 HEAD -- <<file>> // Get the commit where it happened.
+               Git checkout <<commit>> -- <<file>>
+               If deletion has not been committed.
+               Git checkout -- <<file>>
+      Fork
 -	Fork
 -	In the command problem, “git clone https://github.com/nitindipsite/paleo-recipes”
 To keep in sync with upstream branch
